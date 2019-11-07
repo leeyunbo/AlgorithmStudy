@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /* 해쉬테이블을 이용한 마라톤 완주자 가려내기 */
 
-	 class Solution {
+	 class HashParticipant {
 		    public String solution(String[] participant, String[] completion) {
 		        //completion 존재하지 않는 선수들을 return 해주세요. 
 		        //동명이인이 있을수도 있습니다.
