@@ -1,8 +1,3 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
-
 public class Boggle {
 	static int go[][] = {{0,1},{1,0},{-1,0},{0,-1},{1,1},{-1,1},{-1,-1},{1,-1}};
 	static int cnt = 0;
@@ -17,9 +12,8 @@ public class Boggle {
 	public static void main(String[] args) {
 		for(int i=0; i<5; i++) {
 			for(int j=0; j<5; j++) {
-				boggle(i,j,words);
-				if(cnt > 0) {
-					System.out.println("있네");
+				if(boggle(i,j,words)) {
+					System.out.println("발견");
 					return;
 				}
 			}
@@ -31,8 +25,6 @@ public class Boggle {
 	}
 	
 	public static boolean boggle(int y, int x, String words) {
-		
-		
 		if(x < 0 || y < 0 || x > 4 || y > 4) {
 			return false;
 		}
