@@ -8,9 +8,9 @@ public class Sudoku {
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	static int[][] moveArray = {{1,0},{1,1},{0,1},{-1,0},{-1,-1},{0,-1},{1,-1},{-1,1}};
 	static int[][] board = new int[9][9];
-	static boolean row[][] = new boolean[10][10]; //����
-	static boolean column[][] = new boolean[10][10]; //����
-	static boolean square[][] = new boolean[9][10]; //�簢�� 3X3 
+	static boolean row[][] = new boolean[10][10]; //가로
+	static boolean column[][] = new boolean[10][10]; //세로
+	static boolean square[][] = new boolean[9][10]; //사각형 3X3 
 	
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
@@ -31,11 +31,15 @@ public class Sudoku {
 
 		Sudoku(0,0);
 	}
-	
+	/*몇번 째 사각형인지 구하는 함수 
+	  1,2,3    
+	  3,4,5
+	  6,7,8 
+	*/
 	private static int square(int i, int j) {
 		return j/3 + (i/3) * 3; 
 	}
-	
+	//스도쿠 판 출력 함수
 	private static void printSudoku() {
 		for(int i=0; i<9; i++) {
 			for(int j=0; j<9; j++) {
@@ -48,7 +52,7 @@ public class Sudoku {
 			System.out.println();
 		}
 	}
-	
+	//스도쿠 규칙이 맞는 판인지 확인
 	private static boolean checkSudoku() {
 		boolean isFinish = true;
 		for(int i=0; i<9; i++) {
@@ -63,16 +67,15 @@ public class Sudoku {
 		
 		return isFinish;
 	}
-	
-	private static void Sudoku(int i, int j) {
-		
+	// 스도쿠 정답 구하는 메인 알고리즘
+	private static void Sudoku(int i, int j) {		
 		if(i == 9) {
-			//if(checkSudoku()) {
+			if(checkSudoku()) {
 				printSudoku();
-				System.exit(0);// ���α׷� ����
-			//} else {
-			//	return;
-			//}
+				System.exit(0);// 프로그램 종료
+			} else {
+				return;
+			}
 		}
 		
 		if(board[i][j] > 0) {
@@ -90,15 +93,15 @@ public class Sudoku {
 						board[i][j] = k;
 						row[i][k] = column[j][k] = square[square(i,j)][k] = true;
 						Sudoku(i+1,0);
-						//board[i][j] = 0;
-						//row[i][k] = column[j][k] = square[square(i,j)][k] = false;
+						board[i][j] = 0; //백트래킹
+						row[i][k] = column[j][k] = square[square(i,j)][k] = false; //백트래킹
 					}
 					else {
 						board[i][j] = k;
 						row[i][k] = column[j][k] = square[square(i,j)][k] = true;
 						Sudoku(i,j+1);
-						//board[i][j] = 0;
-						//row[i][k] = column[j][k] = square[square(i,j)][k] = false;
+						board[i][j] = 0; //백트래킹
+						row[i][k] = column[j][k] = square[square(i,j)][k] = false; //백트래킹
 					}
 			}
 		}
