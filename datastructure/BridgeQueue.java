@@ -3,12 +3,12 @@ package datastructure;
 import java.util.LinkedList;
 
 /**
- * Æ®·° ¿©·¯ ´ë°¡ °­À» °¡·ÎÁö¸£´Â ÀÏ Â÷¼± ´Ù¸®¸¦ Á¤ÇØÁø ¼øÀ¸·Î °Ç³Ê·Á ÇÕ´Ï´Ù. 
- * ¸ğµç Æ®·°ÀÌ ´Ù¸®¸¦ °Ç³Ê·Á¸é ÃÖ¼Ò ¸î ÃÊ°¡ °É¸®´ÂÁö ¾Ë¾Æ³»¾ß ÇÕ´Ï´Ù. 
- * Æ®·°Àº 1ÃÊ¿¡ 1¸¸Å­ ¿òÁ÷ÀÌ¸ç, ´Ù¸® ±æÀÌ´Â bridge_lengthÀÌ°í 
- * ´Ù¸®´Â ¹«°Ô weight±îÁö °ßµö´Ï´Ù.
- * ¡Ø Æ®·°ÀÌ ´Ù¸®¿¡ ¿ÏÀüÈ÷ ¿À¸£Áö ¾ÊÀº °æ¿ì, ÀÌ Æ®·°ÀÇ ¹«°Ô´Â °í·ÁÇÏÁö ¾Ê½À´Ï´Ù.
- * @author ÀÌÀ±º¹
+ * íŠ¸ëŸ­ ì—¬ëŸ¬ ëŒ€ê°€ ê°•ì„ ê°€ë¡œì§€ë¥´ëŠ” ì¼ ì°¨ì„  ë‹¤ë¦¬ë¥¼ ì •í•´ì§„ ìˆœìœ¼ë¡œ ê±´ë„ˆë ¤ í•©ë‹ˆë‹¤. 
+ * ëª¨ë“  íŠ¸ëŸ­ì´ ë‹¤ë¦¬ë¥¼ ê±´ë„ˆë ¤ë©´ ìµœì†Œ ëª‡ ì´ˆê°€ ê±¸ë¦¬ëŠ”ì§€ ì•Œì•„ë‚´ì•¼ í•©ë‹ˆë‹¤. 
+ * íŠ¸ëŸ­ì€ 1ì´ˆì— 1ë§Œí¼ ì›€ì§ì´ë©°, ë‹¤ë¦¬ ê¸¸ì´ëŠ” bridge_lengthì´ê³  
+ * ë‹¤ë¦¬ëŠ” ë¬´ê²Œ weightê¹Œì§€ ê²¬ë”¥ë‹ˆë‹¤.
+ * â€» íŠ¸ëŸ­ì´ ë‹¤ë¦¬ì— ì™„ì „íˆ ì˜¤ë¥´ì§€ ì•Šì€ ê²½ìš°, ì´ íŠ¸ëŸ­ì˜ ë¬´ê²ŒëŠ” ê³ ë ¤í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
+ * @author ì´ìœ¤ë³µ
  *
  */
 public class BridgeQueue {
@@ -33,14 +33,9 @@ public class BridgeQueue {
 		bridge.waitQueue = waitQueue;
 		Truck firstTruck = bridge.waitQueue.poll();
 		bridge.bridgeQueue.add(firstTruck);
-		bridge.current_weight += firstTruck.weight;//1´ë µé¾î°¨ 
+		bridge.current_weight += firstTruck.weight;//1ëŒ€ ë“¤ì–´ê° 
 		bridge.consume_time++;
 		while(!bridge.waitQueue.isEmpty() || !bridge.bridgeQueue.isEmpty()) {
-			System.out.print(bridge.consume_time+ " : ");
-			for(Truck truck : bridge.bridgeQueue) {
-				System.out.print(truck.weight+ " ");
-			}
-			System.out.println();
 			bridge.addMove();
 			if(!bridge.isFull() && !waitQueue.isEmpty()) {
 				bridge.addTruck();
@@ -78,12 +73,6 @@ class Bridge {
 		bridgeQueue.add(truck);
 		current_weight = current_weight +  truck.weight;
 	}
-	void exitTruck() {
-		Truck truck = bridgeQueue.poll();
-		current_weight = current_weight - truck.weight;
-		this.consume_time = this.consume_time +  truck.remain_time;
-		exitMove(truck.remain_time);
-	}
 	boolean isFull() {
 		int nextWeight = 0;
 		if(waitQueue.size() != 0) {
@@ -94,11 +83,6 @@ class Bridge {
 		}
 		return false;
 	}
-	void exitMove(int time) {
-		for(Truck truck : bridgeQueue) {
-			truck.remain_time = truck.remain_time - time;
-		}
-	}
 	void addMove() {
 		for(Truck truck : bridgeQueue) {
 			truck.remain_time--;
@@ -108,11 +92,5 @@ class Bridge {
 			Truck truck = bridgeQueue.poll();
 			current_weight = current_weight - truck.weight;
 		}
-	}
-	boolean isEmpty() {
-		if(bridgeQueue.isEmpty()) {
-			return true;
-		}
-		return false;
 	}
 }
