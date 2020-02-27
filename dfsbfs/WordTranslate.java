@@ -4,19 +4,19 @@ import java.util.Arrays;
 
 /**
  * 
- * µÎ °³ÀÇ ´Ü¾î begin, target°ú ´Ü¾îÀÇ ÁıÇÕ words°¡ ÀÖ½À´Ï´Ù. 
- * ¾Æ·¡¿Í °°Àº ±ÔÄ¢À» ÀÌ¿ëÇÏ¿© begin¿¡¼­ targetÀ¸·Î º¯È¯ÇÏ´Â °¡Àå ÂªÀº º¯È¯ °úÁ¤À» Ã£À¸·Á°í ÇÕ´Ï´Ù.
- * 1. ÇÑ ¹ø¿¡ ÇÑ °³ÀÇ ¾ËÆÄºª¸¸ ¹Ù²Ü ¼ö ÀÖ½À´Ï´Ù.
- * 2. words¿¡ ÀÖ´Â ´Ü¾î·Î¸¸ º¯È¯ÇÒ ¼ö ÀÖ½À´Ï´Ù.
- * ¿¹¸¦ µé¾î beginÀÌ hit, target°¡ cog, words°¡ [hot,dot,dog,lot,log,cog]¶ó¸é
- *  hit -> hot -> dot -> dog -> cog¿Í °°ÀÌ 4´Ü°è¸¦ °ÅÃÄ º¯È¯ÇÒ ¼ö ÀÖ½À´Ï´Ù.
- * µÎ °³ÀÇ ´Ü¾î begin, target°ú ´Ü¾îÀÇ ÁıÇÕ words°¡ ¸Å°³º¯¼ö·Î ÁÖ¾îÁú ¶§, 
- * ÃÖ¼Ò ¸î ´Ü°èÀÇ °úÁ¤À» °ÅÃÄ beginÀ» targetÀ¸·Î º¯È¯ÇÒ ¼ö ÀÖ´ÂÁö 
- * return ÇÏµµ·Ï solution ÇÔ¼ö¸¦ ÀÛ¼ºÇØÁÖ¼¼¿ä.
+ * ë‘ ê°œì˜ ë‹¨ì–´ begin, targetê³¼ ë‹¨ì–´ì˜ ì§‘í•© wordsê°€ ìˆìŠµë‹ˆë‹¤. 
+ * ì•„ë˜ì™€ ê°™ì€ ê·œì¹™ì„ ì´ìš©í•˜ì—¬ beginì—ì„œ targetìœ¼ë¡œ ë³€í™˜í•˜ëŠ” ê°€ì¥ ì§§ì€ ë³€í™˜ ê³¼ì •ì„ ì°¾ìœ¼ë ¤ê³  í•©ë‹ˆë‹¤.
+ * 1. í•œ ë²ˆì— í•œ ê°œì˜ ì•ŒíŒŒë²³ë§Œ ë°”ê¿€ ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+ * 2. wordsì— ìˆëŠ” ë‹¨ì–´ë¡œë§Œ ë³€í™˜í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+ * ì˜ˆë¥¼ ë“¤ì–´ beginì´ hit, targetê°€ cog, wordsê°€ [hot,dot,dog,lot,log,cog]ë¼ë©´
+ *  hit -> hot -> dot -> dog -> cogì™€ ê°™ì´ 4ë‹¨ê³„ë¥¼ ê±°ì³ ë³€í™˜í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+ * ë‘ ê°œì˜ ë‹¨ì–´ begin, targetê³¼ ë‹¨ì–´ì˜ ì§‘í•© wordsê°€ ë§¤ê°œë³€ìˆ˜ë¡œ ì£¼ì–´ì§ˆ ë•Œ, 
+ * ìµœì†Œ ëª‡ ë‹¨ê³„ì˜ ê³¼ì •ì„ ê±°ì³ beginì„ targetìœ¼ë¡œ ë³€í™˜í•  ìˆ˜ ìˆëŠ”ì§€ 
+ * return í•˜ë„ë¡ solution í•¨ìˆ˜ë¥¼ ì‘ì„±í•´ì£¼ì„¸ìš”.
  * 
  * 
  * 
- * @author À±º¹
+ * @author ìœ¤ë³µ
  *
  */
 public class WordTranslate {
@@ -79,18 +79,4 @@ public class WordTranslate {
 		
 		return isTranslate;
 	}
-	
-	private static boolean isContinue() {
-		int falseCount = 0;
-		boolean isContinue = false;
-		for(int i=0; i<isSelected.length; i++) {
-			if(isSelected[i] == false) falseCount++;
-		}
-		
-		if(falseCount > 0)
-			isContinue =  true;
-		
-		return isContinue;
-	}
-
 }
