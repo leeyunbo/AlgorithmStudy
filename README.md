@@ -22,9 +22,10 @@
   <li> 재귀 호출 </li>
   <li> greedy </li>
   <li> Dynamic Programming </li>
-  <li> 완전 탐색 </li> 
+  <li> 완전 탐색/ </li> 
   <li> DFS/BFS </li> 
   <li> Stack/Queue </li> 
-  <li> Graph </li>
+  <li> Graph/Tree </li>
+  <li> Collections Framework </li>
 </ul>
 <hr>
