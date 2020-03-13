@@ -5,19 +5,19 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 /**
- * n¸íÀÇ ±ÇÅõ¼±¼ö°¡ ±ÇÅõ ´ëÈ¸¿¡ Âü¿©Çß°í °¢°¢ 1¹øºÎÅÍ n¹ø±îÁö ¹øÈ£¸¦ ¹Þ¾Ò½À´Ï´Ù. 
- * ±ÇÅõ °æ±â´Â 1´ë1 ¹æ½ÄÀ¸·Î ÁøÇàÀÌ µÇ°í, ¸¸¾à A ¼±¼ö°¡ B ¼±¼öº¸´Ù ½Ç·ÂÀÌ ÁÁ´Ù¸é A ¼±¼ö´Â B ¼±¼ö¸¦ Ç×»ó ÀÌ±é´Ï´Ù.
- *  ½ÉÆÇÀº ÁÖ¾îÁø °æ±â °á°ú¸¦ °¡Áö°í ¼±¼öµéÀÇ ¼øÀ§¸¦ ¸Å±â·Á ÇÕ´Ï´Ù. ÇÏÁö¸¸ ¸î¸î °æ±â °á°ú¸¦ ºÐ½ÇÇÏ¿© Á¤È®ÇÏ°Ô ¼øÀ§¸¦ ¸Å±æ ¼ö ¾ø½À´Ï´Ù.
- *  ¼±¼öÀÇ ¼ö n, °æ±â °á°ú¸¦ ´ãÀº 2Â÷¿ø ¹è¿­ results°¡ ¸Å°³º¯¼ö·Î ÁÖ¾îÁú ¶§ 
- *  Á¤È®ÇÏ°Ô ¼øÀ§¸¦ ¸Å±æ ¼ö ÀÖ´Â ¼±¼öÀÇ ¼ö¸¦ return ÇÏµµ·Ï solution ÇÔ¼ö¸¦ ÀÛ¼ºÇØÁÖ¼¼¿ä.
+ * nëª…ì˜ ê¶Œíˆ¬ì„ ìˆ˜ê°€ ê¶Œíˆ¬ ëŒ€íšŒì— ì°¸ì—¬í–ˆê³  ê°ê° 1ë²ˆë¶€í„° në²ˆê¹Œì§€ ë²ˆí˜¸ë¥¼ ë°›ì•˜ìŠµë‹ˆë‹¤. 
+ * ê¶Œíˆ¬ ê²½ê¸°ëŠ” 1ëŒ€1 ë°©ì‹ìœ¼ë¡œ ì§„í–‰ì´ ë˜ê³ , ë§Œì•½ A ì„ ìˆ˜ê°€ B ì„ ìˆ˜ë³´ë‹¤ ì‹¤ë ¥ì´ ì¢‹ë‹¤ë©´ A ì„ ìˆ˜ëŠ” B ì„ ìˆ˜ë¥¼ í•­ìƒ ì´ê¹ë‹ˆë‹¤.
+ *  ì‹¬íŒì€ ì£¼ì–´ì§„ ê²½ê¸° ê²°ê³¼ë¥¼ ê°€ì§€ê³  ì„ ìˆ˜ë“¤ì˜ ìˆœìœ„ë¥¼ ë§¤ê¸°ë ¤ í•©ë‹ˆë‹¤. í•˜ì§€ë§Œ ëª‡ëª‡ ê²½ê¸° ê²°ê³¼ë¥¼ ë¶„ì‹¤í•˜ì—¬ ì •í™•í•˜ê²Œ ìˆœìœ„ë¥¼ ë§¤ê¸¸ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
+ *  ì„ ìˆ˜ì˜ ìˆ˜ n, ê²½ê¸° ê²°ê³¼ë¥¼ ë‹´ì€ 2ì°¨ì› ë°°ì—´ resultsê°€ ë§¤ê°œë³€ìˆ˜ë¡œ ì£¼ì–´ì§ˆ ë•Œ 
+ *  ì •í™•í•˜ê²Œ ìˆœìœ„ë¥¼ ë§¤ê¸¸ ìˆ˜ ìžˆëŠ” ì„ ìˆ˜ì˜ ìˆ˜ë¥¼ return í•˜ë„ë¡ solution í•¨ìˆ˜ë¥¼ ìž‘ì„±í•´ì£¼ì„¸ìš”.
  *  
- *  Á¦ÇÑ»çÇ×
- *  ¼±¼öÀÇ ¼ö´Â 1¸í ÀÌ»ó 100¸í ÀÌÇÏÀÔ´Ï´Ù.
- *  °æ±â °á°ú´Â 1°³ ÀÌ»ó 4,500°³ ÀÌÇÏÀÔ´Ï´Ù.
- *  results ¹è¿­ °¢ Çà [A, B]´Â A ¼±¼ö°¡ B ¼±¼ö¸¦ ÀÌ°å´Ù´Â ÀÇ¹ÌÀÔ´Ï´Ù.
- *  ¸ðµç °æ±â °á°ú¿¡´Â ¸ð¼øÀÌ ¾ø½À´Ï´Ù.
+ *  ì œí•œì‚¬í•­
+ *  ì„ ìˆ˜ì˜ ìˆ˜ëŠ” 1ëª… ì´ìƒ 100ëª… ì´í•˜ìž…ë‹ˆë‹¤.
+ *  ê²½ê¸° ê²°ê³¼ëŠ” 1ê°œ ì´ìƒ 4,500ê°œ ì´í•˜ìž…ë‹ˆë‹¤.
+ *  results ë°°ì—´ ê° í–‰ [A, B]ëŠ” A ì„ ìˆ˜ê°€ B ì„ ìˆ˜ë¥¼ ì´ê²¼ë‹¤ëŠ” ì˜ë¯¸ìž…ë‹ˆë‹¤.
+ *  ëª¨ë“  ê²½ê¸° ê²°ê³¼ì—ëŠ” ëª¨ìˆœì´ ì—†ìŠµë‹ˆë‹¤.
  *  
- * @author ÀÌÀ±º¹
+ * @author ì´ìœ¤ë³µ
  *
  */
 public class CalcRank {
@@ -36,7 +36,7 @@ public class CalcRank {
 		if(myResults.length == 0) return;
 		
 		
-		//1. ÀÎÁ¢ ¸®½ºÆ®¸¦ ¸¸µç´Ù. 
+		//1. ì¸ì ‘ ë¦¬ìŠ¤íŠ¸ë¥¼ ë§Œë“ ë‹¤. 
 		for(int i=0; i<myN; i++) {
 			adjList.add(new ArrayList<>());
 		}
@@ -45,22 +45,22 @@ public class CalcRank {
 			adjList.get(myResults[i][0]-1).add(myResults[i][1]-1);
 		}
 		
-		//2. ÆÐ¹è¸¦ °è»êÇÑ´Ù.
+		//2. íŒ¨ë°°ë¥¼ ê³„ì‚°í•œë‹¤.
 		for(int i=0; i<myN; i++) {
 			CalcLose(i,i);
 			isVisited = new boolean[myN];
 		}
 
-		//3. ½Â¸®¸¦ °è»êÇÑ´Ù.
+		//3. ìŠ¹ë¦¬ë¥¼ ê³„ì‚°í•œë‹¤.
 		for(int i=0; i<myN; i++) {
 			CalcWin(i,i);
 			isVisited = new boolean[myN];
 		}
 		
 		
-		//3. ½Â¸®¿Í ÆÐ¹è¸¦ ´õÇØ¼­ n-1ÀÌ ³ª¿À¸é Ã£±â ¼º°øÇÑ ÄÉÀÌ½º, ½Â¸®´Â ¿¬°áµÈ ³ëµå °¹¼ö!   
-		//System.out.print(i+1  + "¹ø ³ëµå : ");
-		//System.out.println("½Â¸® : " + winCount[i] + " ÆÐ¹è : " + loseCount[i]);
+		//3. ìŠ¹ë¦¬ì™€ íŒ¨ë°°ë¥¼ ë”í•´ì„œ n-1ì´ ë‚˜ì˜¤ë©´ ì°¾ê¸° ì„±ê³µí•œ ì¼€ì´ìŠ¤, ìŠ¹ë¦¬ëŠ” ì—°ê²°ëœ ë…¸ë“œ ê°¯ìˆ˜!   
+		//System.out.print(i+1  + "ë²ˆ ë…¸ë“œ : ");
+		//System.out.println("ìŠ¹ë¦¬ : " + winCount[i] + " íŒ¨ë°° : " + loseCount[i]);
 		for(int i=0; i<myN; i++) {
 			if(loseCount[i] + winCount[i] == (myN-1)) {
 				answer++;
@@ -71,9 +71,9 @@ public class CalcRank {
 	
 	private static void CalcLose(int startNode, int rootNode) {
 		if(adjList.get(startNode).size() == 0) return;
-		// 1. ÀÎÁ¢ ³ëµå¿¡ Á¢±ÙÇÑ´Ù.
+		// 1. ì¸ì ‘ ë…¸ë“œì— ì ‘ê·¼í•œë‹¤.
 		for(int endNode : adjList.get(startNode)) {
-			//2. ¸¸¾à ÇöÀç ³ëµå°¡ µé¸®Áö ¾ÊÀº °÷ÀÌ¶ó¸é ÆÐ¹è Ãß°¡ 
+			//2. ë§Œì•½ í˜„ìž¬ ë…¸ë“œê°€ ë“¤ë¦¬ì§€ ì•Šì€ ê³³ì´ë¼ë©´ íŒ¨ë°° ì¶”ê°€ 
 			if(!isVisited[endNode]) {
 				loseCount[endNode]++;
 				isVisited[endNode] = true;
@@ -84,9 +84,9 @@ public class CalcRank {
 	
 	private static void CalcWin(int startNode,int rootNode) {
 		if(adjList.get(startNode).size() == 0) return; 
-		// 1. ÀÎÁ¢ ³ëµå¿¡ Á¢±ÙÇÑ´Ù.
+		// 1. ì¸ì ‘ ë…¸ë“œì— ì ‘ê·¼í•œë‹¤.
 		for(int endNode: adjList.get(startNode)) {
-			// 2. ¸¸¾à ÇöÀç ³ëµå°¡ µé¸®Áö ¾ÊÀº °÷ÀÌ¿´´Ù¸é ½Â¸® Ãß°¡
+			// 2. ë§Œì•½ í˜„ìž¬ ë…¸ë“œê°€ ë“¤ë¦¬ì§€ ì•Šì€ ê³³ì´ì˜€ë‹¤ë©´ ìŠ¹ë¦¬ ì¶”ê°€
 			if(!isVisited[endNode]) { 
 				winCount[rootNode]++;
 				isVisited[endNode] = true;
