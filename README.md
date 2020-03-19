@@ -16,16 +16,16 @@
   <li> 이클립스 </li> 
 </ul>
 <hr>
-<h5>공부 범위</h5>
+<h5>알고리즘 풀이</h5>
 <ul>
   <li> 정렬 </li>
   <li> 재귀 호출 </li>
   <li> greedy </li>
-  <li> Dynamic Programming </li>
+  <li> Dynamic Programming</li>
   <li> 완전 탐색/ </li> 
   <li> DFS/BFS </li> 
   <li> Stack/Queue </li> 
   <li> Graph/Tree </li>
-  <li> Collections Framework </li>
+  <li> 우선순위 큐</li> 
 </ul>
 <hr>
