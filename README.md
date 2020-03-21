@@ -27,5 +27,7 @@
   <li> Stack/Queue </li> 
   <li> Graph/Tree </li>
   <li> 우선순위 큐</li> 
+  <li> 쓰레드 프로그래밍/동기화 </li> 
+  <li> 소켓 프로그래밍 </li>
 </ul>
 <hr>
