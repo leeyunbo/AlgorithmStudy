@@ -1,3 +1,4 @@
+package backTracking;
 import java.util.LinkedList;
 import java.util.Scanner;
 
