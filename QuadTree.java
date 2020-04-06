@@ -1,3 +1,4 @@
+package divideandconquer;
 import java.util.*;
 
 public class QuadTree {
@@ -39,17 +40,4 @@ public class QuadTree {
 			decompressed(x+half,y+half,half);
 		}
 	}
-	
-	private static void compressed() {
-		
-	}
-	
-	private static void reverse() {
-		for(int i=0; i<20; i++) {
-			for(int j=0; j<20; j++) {
-				
-			}
-		}
-	}
-
 }
