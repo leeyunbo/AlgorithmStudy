@@ -44,13 +44,13 @@ public class CreatePaper {
 		int HorEndIdx = HorStartIdx + length/2;
 		int VerEndIdx = VerStartIdx + length/2;
 		
-		//1. ¿ÞÂÊÀ§
+		//1. ì™¼ìª½ìœ„
 		createFunc(HorStartIdx,VerStartIdx,length/2);
-		//2. ¿À¸¥ÂÊÀ§
+		//2. ì˜¤ë¥¸ìª½ìœ„
 		createFunc(HorEndIdx,VerStartIdx,length/2);
-		//3. ¿ÞÂÊ¾Æ·¡
+		//3. ì™¼ìª½ì•„ëž˜
 		createFunc(HorStartIdx,VerEndIdx,length/2);
-		//4. ¿À¸¥ÂÊ¾Æ·¡
+		//4. ì˜¤ë¥¸ìª½ì•„ëž˜
 		createFunc(HorEndIdx,VerEndIdx,length/2);
 	}
 	
