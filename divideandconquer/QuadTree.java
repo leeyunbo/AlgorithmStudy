@@ -28,7 +28,7 @@ public class QuadTree {
 				}
 			}
 		}
-		else { //¸¸¾à xÀÎ °æ¿ì 
+		else { //Â¸Â¸Â¾Ã  xÃ€ÃŽ Â°Ã¦Â¿Ã¬ 
 			int half = size/2;
 			compressed = compressed.substring(1);
 			decompressed(x,y,half);
