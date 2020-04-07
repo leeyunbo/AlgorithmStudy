@@ -27,13 +27,10 @@ public class ColoringChess {
 				minColoring = Math.min(minColoring,coloring(leftIdx,rightIdx));
 			}
 		}	
-		
 		System.out.println(minColoring);
 	}
 	
-	
 	private static int coloring(int leftStartIdx, int rightStartIdx) {
-		
 		int coloringCnt = 0;
 		int checkleftIdx;
 		int checkRightIdx;
@@ -41,22 +38,19 @@ public class ColoringChess {
 			for(int rightIdx = rightStartIdx; rightIdx <= rightStartIdx + 7; rightIdx++) {
 				checkleftIdx = leftIdx - leftStartIdx;
 				checkRightIdx = rightIdx - rightStartIdx;
-					if(checkleftIdx % 2 == 0 && checkRightIdx % 2 == 0) {
-						if(chess.get(leftIdx).charAt(rightIdx) != 'W') coloringCnt++;
-					}
-					// ¦/Ȧ
-					else if(checkleftIdx % 2 == 0 && checkRightIdx % 2 != 0) {
-						if(chess.get(leftIdx).charAt(rightIdx) != 'B') coloringCnt++;
-					}
-					// Ȧ/¦
-					else if(checkleftIdx % 2 != 0 && checkRightIdx % 2 == 0) {
-						if(chess.get(leftIdx).charAt(rightIdx) != 'B') coloringCnt++;
-					}
-					// Ȧ/Ȧ
-					else {
-						if(chess.get(leftIdx).charAt(rightIdx) != 'W') coloringCnt++;
-					}
+				if(checkleftIdx % 2 == 0 && checkRightIdx % 2 == 0) {
+					if(chess.get(leftIdx).charAt(rightIdx) != 'W') coloringCnt++;
 				}
+				else if(checkleftIdx % 2 == 0 && checkRightIdx % 2 != 0) {
+					if(chess.get(leftIdx).charAt(rightIdx) != 'B') coloringCnt++;
+				}
+				else if(checkleftIdx % 2 != 0 && checkRightIdx % 2 == 0) {
+					if(chess.get(leftIdx).charAt(rightIdx) != 'B') coloringCnt++;
+				}
+				else {
+					if(chess.get(leftIdx).charAt(rightIdx) != 'W') coloringCnt++;
+				}
+			}
 		}
 		
 		int secondColoringCnt = 0;
@@ -64,19 +58,15 @@ public class ColoringChess {
 			for(int rightIdx = rightStartIdx; rightIdx <= rightStartIdx + 7; rightIdx++) {
 				checkleftIdx = leftIdx - leftStartIdx;
 				checkRightIdx = rightIdx - rightStartIdx;
-					// ¦/¦
 				if(checkleftIdx % 2 == 0 && checkRightIdx % 2 == 0) {
 					if(chess.get(leftIdx).charAt(rightIdx) != 'B') secondColoringCnt++;
 				}
-					// ¦/Ȧ
 				else if(checkleftIdx % 2 == 0 && checkRightIdx % 2 != 0) {
 					if(chess.get(leftIdx).charAt(rightIdx) != 'W') secondColoringCnt++;
 				}
-					// Ȧ/¦
 				else if(checkleftIdx % 2 != 0 && checkRightIdx % 2 == 0) {
 					if(chess.get(leftIdx).charAt(rightIdx) != 'W') secondColoringCnt++;
 				}
-					// Ȧ/Ȧ
 				else {
 					if(chess.get(leftIdx).charAt(rightIdx) != 'B') secondColoringCnt++;
 				}
@@ -84,5 +74,4 @@ public class ColoringChess {
 		}
 		return Math.min(coloringCnt, secondColoringCnt);
 	}
-	
 }
