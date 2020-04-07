@@ -1,5 +1,3 @@
-package coupang;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -55,13 +53,13 @@ public class LoadBalancing2 {
 		
 		addRequest();
 		startServer(numServer);
-		System.out.println("Round RobinÀÇ ÃÑ °É¸° ½Ã°£ :" + RoundRobin());
+		System.out.println("Round Robinì˜ ì´ ê±¸ë¦° ì‹œê°„ :" + RoundRobin());
 		addRequest();
 		startServer(numServer);
-		System.out.println("Least ConnectionÀÇ ÃÑ °É¸° ½Ã°£ :" + LeastConnection());
+		System.out.println("Least Connectionì˜ ì´ ê±¸ë¦° ì‹œê°„ :" + LeastConnection());
 	}
 	
-	static public void addRequest() throws ParseException { // ¿äÃ» Ã¤¿ì±â
+	static public void addRequest() throws ParseException { // ìš”ì²­ ì±„ìš°ê¸°
 		int numRequest = request_time.length;
 		
 		for(int i=0; i<numRequest; i++) {
@@ -72,7 +70,7 @@ public class LoadBalancing2 {
 		}		
 	}
 	
-	static public void startServer(int numServer) { // ¼­¹ö ½ÃÀÛ 
+	static public void startServer(int numServer) { // ì„œë²„ ì‹œì‘ 
 		for(int i=0; i<numServer; i++) {
 			Server server = new Server(i+1);
 			serverMap.put(i+1, server);
