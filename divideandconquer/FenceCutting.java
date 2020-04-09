@@ -10,7 +10,7 @@ public class FenceCutting {
 			height[i] = scanner.nextInt();
 		}
 		
-		System.out.println(solve(0,height.length-1)); // ºÐÇÒ Á¤º¹ 
+		System.out.println(solve(0,height.length-1)); // ë¶„í•  ì •ë³µ 
 		System.out.println(bruteForce()); // bruteForce
 	}
 	
@@ -39,15 +39,15 @@ public class FenceCutting {
 		if(left == right) {
 			return height[left];
 		}
-		//¿ÞÂÊ,¿À¸¥ÂÊ
+		//ì™¼ìª½,ì˜¤ë¥¸ìª½
 		middle = (left+right)/2;
 		ret = Math.max(solve(left,middle),solve(middle+1,right));
-		//°ãÄ¡´Â ºÎºÐ 
+		//ê²¹ì¹˜ëŠ” ë¶€ë¶„ 
 	    low = middle;
 		high = middle+1;
 		min_height = Math.min(height[low], height[high]); 
-		ret = Math.max(ret, min_height*2); //µü µÎ°³¸¸ °è»êÇÒ °æ¿ì.
-		while(low > left || high < right) {  //±× ÀÌ»ó 
+		ret = Math.max(ret, min_height*2); //ë”± ë‘ê°œë§Œ ê³„ì‚°í•  ê²½ìš°.
+		while(low > left || high < right) {  //ê·¸ ì´ìƒ 
 			if(low > left && (high == right || height[low-1] > height[high+1])) {
 				low--; 
 				min_height = Math.min(height[low], min_height);
