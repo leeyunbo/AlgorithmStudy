@@ -19,7 +19,7 @@ public class CalcRankBFS {
 		isVisited = new boolean[myN];
 		if(myResults.length == 0) return;
 		
-		//1. ÀÎÁ¢ ¸®½ºÆ®¸¦ ¸¸µç´Ù. 
+		//1. ì¸ì ‘ ë¦¬ìŠ¤íŠ¸ë¥¼ ë§Œë“ ë‹¤. 
 		for(int i=0; i<myN; i++) {
 			adjList.add(new ArrayList<>());
 		}
@@ -28,13 +28,13 @@ public class CalcRankBFS {
 			adjList.get(myResults[i][0]-1).add(myResults[i][1]-1);
 		}
 		
-		//2. ÆĞ¹è¸¦ °è»êÇÑ´Ù.
+		//2. íŒ¨ë°°ë¥¼ ê³„ì‚°í•œë‹¤.
 				for(int i=0; i<myN; i++) {
 					CalcLose(i);
 					isVisited = new boolean[myN];
 				}
 
-				//3. ½Â¸®¸¦ °è»êÇÑ´Ù.
+				//3. ìŠ¹ë¦¬ë¥¼ ê³„ì‚°í•œë‹¤.
 				for(int i=0; i<myN; i++) {
 					CalcWin(i,i);
 					isVisited = new boolean[myN];
@@ -42,10 +42,10 @@ public class CalcRankBFS {
 	
 		
 		
-		//3. ½Â¸®¿Í ÆĞ¹è¸¦ ´õÇØ¼­ n-1ÀÌ ³ª¿À¸é Ã£±â ¼º°øÇÑ ÄÉÀÌ½º, ½Â¸®´Â ¿¬°áµÈ ³ëµå °¹¼ö!   
+		//3. ìŠ¹ë¦¬ì™€ íŒ¨ë°°ë¥¼ ë”í•´ì„œ n-1ì´ ë‚˜ì˜¤ë©´ ì°¾ê¸° ì„±ê³µí•œ ì¼€ì´ìŠ¤, ìŠ¹ë¦¬ëŠ” ì—°ê²°ëœ ë…¸ë“œ ê°¯ìˆ˜!   
 		for(int i=0; i<myN; i++) {
-			System.out.print(i+1  + "¹ø ³ëµå : ");
-			System.out.println("½Â¸® : " + winCount[i] + " ÆĞ¹è : " + loseCount[i]);
+			System.out.print(i+1  + "ë²ˆ ë…¸ë“œ : ");
+			System.out.println("ìŠ¹ë¦¬ : " + winCount[i] + " íŒ¨ë°° : " + loseCount[i]);
 			if(loseCount[i] + winCount[i] == (myN-1)) {
 				answer++;
 			}
@@ -70,9 +70,9 @@ public class CalcRankBFS {
 	
 	private static void CalcWin(int startNode,int rootNode) {
 		if(adjList.get(startNode).size() == 0) return; 
-		// 1. ÀÎÁ¢ ³ëµå¿¡ Á¢±ÙÇÑ´Ù.
+		// 1. ì¸ì ‘ ë…¸ë“œì— ì ‘ê·¼í•œë‹¤.
 		for(int endNode: adjList.get(startNode)) {
-			// 2. ¸¸¾à ÇöÀç ³ëµå°¡ µé¸®Áö ¾ÊÀº °÷ÀÌ¿´´Ù¸é ½Â¸® Ãß°¡
+			// 2. ë§Œì•½ í˜„ì¬ ë…¸ë“œê°€ ë“¤ë¦¬ì§€ ì•Šì€ ê³³ì´ì˜€ë‹¤ë©´ ìŠ¹ë¦¬ ì¶”ê°€
 			if(!isVisited[endNode]) { 
 				winCount[rootNode]++;
 				isVisited[endNode] = true;
