@@ -1,10 +1,10 @@
 import java.util.LinkedList;
 import java.util.Scanner;
 /*
- * Àç±ÍÈ£ÃâÀ» È°¿ëÇÑ ÀÌÇ×°è¼ö ¹®Á¦ Ç®ÀÌ
- * Binomial : µ¿Àû°èÈ¹¹ýÀ» ÀÌ¿ëÇÑ ÀÌÇ×°è¼ö ¾Ë°í¸®Áò ¸Þ¼Òµå 
- * None_Memoization_Binomial : µ¿Àû°ÔÈ¹¹ýÀ» »ç¿ëÇÏÁö ¾Ê´Â ÀÌÇ×°è¼ö ¾Ë°í¸®Áò ¸Þ¼Òµå 
- * ¼ýÀÚ°¡ Ä¿Áú¼ö·Ï µ¿Àû°ÔÈ¹¹ýÀ» »ç¿ëÇßÀ» °æ¿ì°¡ Àç±ÍÈ£Ãâ È½¼ö°¡ ±Þ°ÝÇÏ°Ô ÁÙ¾îµë 
+ * ìž¬ê·€í˜¸ì¶œì„ í™œìš©í•œ ì´í•­ê³„ìˆ˜ ë¬¸ì œ í’€ì´
+ * Binomial : ë™ì ê³„íšë²•ì„ ì´ìš©í•œ ì´í•­ê³„ìˆ˜ ì•Œê³ ë¦¬ì¦˜ ë©”ì†Œë“œ 
+ * None_Memoization_Binomial : ë™ì ê²Œíšë²•ì„ ì‚¬ìš©í•˜ì§€ ì•ŠëŠ” ì´í•­ê³„ìˆ˜ ì•Œê³ ë¦¬ì¦˜ ë©”ì†Œë“œ 
+ * ìˆ«ìžê°€ ì»¤ì§ˆìˆ˜ë¡ ë™ì ê²Œíšë²•ì„ ì‚¬ìš©í–ˆì„ ê²½ìš°ê°€ ìž¬ê·€í˜¸ì¶œ íšŸìˆ˜ê°€ ê¸‰ê²©í•˜ê²Œ ì¤„ì–´ë“¬ 
  */
 
 public class Binomial {
