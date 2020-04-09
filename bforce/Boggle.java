@@ -13,13 +13,13 @@ public class Boggle {
 		for(int i=0; i<5; i++) {
 			for(int j=0; j<5; j++) {
 				if(boggle(i,j,words)) {
-					System.out.println("¹ß°ß");
+					System.out.println("Â¹ÃŸÂ°ÃŸ");
 					return;
 				}
 			}
 		}
 		
-		System.out.println("¾ø³×");
+		System.out.println("Â¾Ã¸Â³Ã—");
 		
 	
 	}
