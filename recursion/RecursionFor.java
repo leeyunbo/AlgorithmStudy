@@ -8,8 +8,8 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 /*
- * n°³ÀÇ ¿ø¼ÒÁß m°³¸¦ °ñ¶ó¾ßÇÔ
- * ÀÌ°É Àç±ÍÈ£Ãâ·Î Ç®¾î¶ó
+ * nê°œì˜ ì›ì†Œì¤‘ mê°œë¥¼ ê³¨ë¼ì•¼í•¨
+ * ì´ê±¸ ì¬ê·€í˜¸ì¶œë¡œ í’€ì–´ë¼
  */
 public class RecursionFor {
 	static int count = 0;
