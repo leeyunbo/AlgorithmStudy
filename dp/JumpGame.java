@@ -1,11 +1,11 @@
 import java.util.Arrays;
 import java.util.Scanner;
 /*
- * nXn Å©±âÀÇ °ÝÀÚ¿¡ 1ºÎÅÍ 9±îÁöÀÇ Á¤¼ö¸¦ ¾´ °ÔÀÓÆÇÀÌ ÀÖ´Ù.
- * ÀÌ¶§ °ÔÀÓÀÇ ¸ñÀûÀº °ÔÀÓÆÇÀÇ ¿ÞÂÊ À§ Ä­¿¡¼­ ½ÃÀÛÇØ¼­ °ÔÀÓÆÇÀÇ ¸Ç ¿À¸¥ÂÊ ¾Æ·¡ Ä­¿¡ µµÂøÇÏ´Â °ÍÀÌ´Ù. 
- * ÀÌ¶§ °¢ Ä­¿¡ ÀûÇô ÀÖ´Â ¼ýÀÚ¸¸Å­ ¾Æ·¡ÂÊÀÌ³ª ¿À¸¥ÂÊÀ¸·Î ÀÌµ¿ÇÒ ¼ö ÀÖÀ¸¸ç, Áß°£¿¡ °ÔÀÓÆÇ¿¡ ¹þ¾î³ª¸é ¾ÈµÇ´Â ±ÔÄ¢ÀÌ ÀÖ´Ù.
- * ¹®Á¦´Â °ÔÀÓÆÇÀÌ ÁÖ¾îÁú ¶§ ½ÃÀÛÁ¡¿¡¼­ ³¡Á¡À¸·Î µµ´ÞÇÏ´Â ¹æ¹ýÀÌ Á¸ÀçÇÏ´ÂÁö¸¦ È®ÀÎÇÏ´Â °ÍÀÌ´Ù.
- * Á¦ÇÑ½Ã°£ÀÌ Á¸ÀçÇÏ¹Ç·Î ´Ü¼øÇÑ ¿ÏÀüÅ½»ö Àç±ÍÈ£ÃâÀ» ÀÌ¿ëÇÏ¸é ¹«Á¶°Ç ½Ã°£ÃÊ°ú°¡ ¹ß»ýÇÔ.
+ * nXn í¬ê¸°ì˜ ê²©ìžì— 1ë¶€í„° 9ê¹Œì§€ì˜ ì •ìˆ˜ë¥¼ ì“´ ê²Œìž„íŒì´ ìžˆë‹¤.
+ * ì´ë•Œ ê²Œìž„ì˜ ëª©ì ì€ ê²Œìž„íŒì˜ ì™¼ìª½ ìœ„ ì¹¸ì—ì„œ ì‹œìž‘í•´ì„œ ê²Œìž„íŒì˜ ë§¨ ì˜¤ë¥¸ìª½ ì•„ëž˜ ì¹¸ì— ë„ì°©í•˜ëŠ” ê²ƒì´ë‹¤. 
+ * ì´ë•Œ ê° ì¹¸ì— ì í˜€ ìžˆëŠ” ìˆ«ìžë§Œí¼ ì•„ëž˜ìª½ì´ë‚˜ ì˜¤ë¥¸ìª½ìœ¼ë¡œ ì´ë™í•  ìˆ˜ ìžˆìœ¼ë©°, ì¤‘ê°„ì— ê²Œìž„íŒì— ë²—ì–´ë‚˜ë©´ ì•ˆë˜ëŠ” ê·œì¹™ì´ ìžˆë‹¤.
+ * ë¬¸ì œëŠ” ê²Œìž„íŒì´ ì£¼ì–´ì§ˆ ë•Œ ì‹œìž‘ì ì—ì„œ ëì ìœ¼ë¡œ ë„ë‹¬í•˜ëŠ” ë°©ë²•ì´ ì¡´ìž¬í•˜ëŠ”ì§€ë¥¼ í™•ì¸í•˜ëŠ” ê²ƒì´ë‹¤.
+ * ì œí•œì‹œê°„ì´ ì¡´ìž¬í•˜ë¯€ë¡œ ë‹¨ìˆœí•œ ì™„ì „íƒìƒ‰ ìž¬ê·€í˜¸ì¶œì„ ì´ìš©í•˜ë©´ ë¬´ì¡°ê±´ ì‹œê°„ì´ˆê³¼ê°€ ë°œìƒí•¨.
  */
 
 public class JumpGame {
@@ -41,15 +41,15 @@ public class JumpGame {
 		}
 		
 		if(JumpGame(0,0)==false) {
-			System.out.println("ºÒ°¡´É");
+			System.out.println("ë¶ˆê°€ëŠ¥");
 		} else {
-			System.out.println("µµÂø°¡´É");
+			System.out.println("ë„ì°©ê°€ëŠ¥");
 		}
 		
 		if(MemoizationJumpGame(0,0,cache)==0) {
-			System.out.println("ºÒ°¡´É");
+			System.out.println("ë¶ˆê°€ëŠ¥");
 		} else {
-			System.out.println("µµÂø°¡´É");
+			System.out.println("ë„ì°©ê°€ëŠ¥");
 		}
 		
 		System.out.println("Memoization : " + MCount);
