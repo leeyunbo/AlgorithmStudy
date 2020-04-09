@@ -39,7 +39,7 @@ class Queue {
 		this.list = list;
 	}
 	public void push(int idx) {
-		if(idx >= list.length) return; //±âº»ÀûÀ¸·Î ÀÚ¹ÙÀÇ ÇÔ¼ö È£ÃâÀº È£Ãâ ½ºÅÃ¿¡ ½×ÀÌ±â ¶§¹®¿¡, ¸Ç ¸¶Áö¸·¿¡ push µÈ ÇÔ¼ö°¡ Ã¹¹øÂ°·Î È£ÃâµÈ´Ù.
+		if(idx >= list.length) return; //ê¸°ë³¸ì ìœ¼ë¡œ ìë°”ì˜ í•¨ìˆ˜ í˜¸ì¶œì€ í˜¸ì¶œ ìŠ¤íƒì— ìŒ“ì´ê¸° ë•Œë¬¸ì—, ë§¨ ë§ˆì§€ë§‰ì— push ëœ í•¨ìˆ˜ê°€ ì²«ë²ˆì§¸ë¡œ í˜¸ì¶œëœë‹¤.
 		push(idx+1);
 		stack.push(list[idx]);
 	}
