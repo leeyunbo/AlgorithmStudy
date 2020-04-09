@@ -23,7 +23,7 @@ public class TSP {
 	public static int tsp(int currentLength, LinkedList<Integer> path, boolean[] visited) {
 		int ret = INF;
 		
-		if(path.size() == n) { // ´Ù½Ã Ãâ¹ßÁö·Î º¹±Í
+		if(path.size() == n) { // Â´Ã™Â½Ãƒ ÃƒÃ¢Â¹ÃŸÃÃ¶Â·Ã ÂºÂ¹Â±Ã
 			return currentLength + dist[path.peekFirst()][path.peekLast()];  
 		}
 		
