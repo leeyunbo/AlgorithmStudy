@@ -8,8 +8,8 @@ import java.util.List;
 
 /*
  * https://www.acmicpc.net/problem/10951
- * ¹éÁØ 10951¹ø A+B -4 
- * ½Ã°£ Á¦ÇÑ 1ÃÊ, ¸Þ¸ð¸® Á¦ÇÑ 256MB 
+ * ë°±ì¤€ 10951ë²ˆ A+B -4 
+ * ì‹œê°„ ì œí•œ 1ì´ˆ, ë©”ëª¨ë¦¬ ì œí•œ 256MB 
  */
 public class EOFEx {
 	public static void main(String[] args) throws IOException {
