@@ -8,8 +8,8 @@ import java.util.List;
 
 /*
  * https://www.acmicpc.net/problem/10952
- * ¹éÁØ 10952¹ø A+B - 5
- * ½Ã°£ Á¦ÇÑ 1ÃÊ, ¸Þ¸ð¸® Á¦ÇÑ 256MB
+ * ë°±ì¤€ 10952ë²ˆ A+B - 5
+ * ì‹œê°„ ì œí•œ 1ì´ˆ, ë©”ëª¨ë¦¬ ì œí•œ 256MB
  */
 public class APLUSB5 {
 	public static void main(String[] args) throws IOException {
