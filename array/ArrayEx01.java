@@ -9,11 +9,11 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 /*
- * ´ëÇÐ»ý »õ³»±âµéÀÇ 90%´Â ÀÚ½ÅÀÌ ¹Ý¿¡¼­ Æò±ÕÀº ³Ñ´Â´Ù°í »ý°¢ÇÑ´Ù. ´ç½ÅÀº ±×µé¿¡°Ô ½½ÇÂ Áø½ÇÀ» ¾Ë·ÁÁà¾ß ÇÑ´Ù.
- * Ã¹Â° ÁÙ¿¡´Â Å×½ºÆ® ÄÉÀÌ½ºÀÇ °³¼ö C°¡ ÁÖ¾îÁø´Ù.
- * µÑÂ° ÁÙºÎÅÍ °¢ Å×½ºÆ® ÄÉÀÌ½º¸¶´Ù ÇÐ»ýÀÇ ¼ö N(1 ¡Â N ¡Â 1000, NÀº Á¤¼ö)ÀÌ Ã¹ ¼ö·Î ÁÖ¾îÁö°í, 
- * ÀÌ¾î¼­ N¸íÀÇ Á¡¼ö°¡ ÁÖ¾îÁø´Ù. Á¡¼ö´Â 0º¸´Ù Å©°Å³ª °°°í, 100º¸´Ù ÀÛ°Å³ª °°Àº Á¤¼öÀÌ´Ù.
- * °¢ ÄÉÀÌ½º¸¶´Ù ÇÑ ÁÙ¾¿ Æò±ÕÀ» ³Ñ´Â ÇÐ»ýµéÀÇ ºñÀ²À» ¹Ý¿Ã¸²ÇÏ¿© ¼Ò¼öÁ¡ ¼ÂÂ° ÀÚ¸®±îÁö Ãâ·ÂÇÑ´Ù.
+ * ëŒ€í•™ìƒ ìƒˆë‚´ê¸°ë“¤ì˜ 90%ëŠ” ìžì‹ ì´ ë°˜ì—ì„œ í‰ê· ì€ ë„˜ëŠ”ë‹¤ê³  ìƒê°í•œë‹¤. ë‹¹ì‹ ì€ ê·¸ë“¤ì—ê²Œ ìŠ¬í”ˆ ì§„ì‹¤ì„ ì•Œë ¤ì¤˜ì•¼ í•œë‹¤.
+ * ì²«ì§¸ ì¤„ì—ëŠ” í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ì˜ ê°œìˆ˜ Cê°€ ì£¼ì–´ì§„ë‹¤.
+ * ë‘˜ì§¸ ì¤„ë¶€í„° ê° í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ë§ˆë‹¤ í•™ìƒì˜ ìˆ˜ N(1 â‰¤ N â‰¤ 1000, Nì€ ì •ìˆ˜)ì´ ì²« ìˆ˜ë¡œ ì£¼ì–´ì§€ê³ , 
+ * ì´ì–´ì„œ Nëª…ì˜ ì ìˆ˜ê°€ ì£¼ì–´ì§„ë‹¤. ì ìˆ˜ëŠ” 0ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ê³ , 100ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì€ ì •ìˆ˜ì´ë‹¤.
+ * ê° ì¼€ì´ìŠ¤ë§ˆë‹¤ í•œ ì¤„ì”© í‰ê· ì„ ë„˜ëŠ” í•™ìƒë“¤ì˜ ë¹„ìœ¨ì„ ë°˜ì˜¬ë¦¼í•˜ì—¬ ì†Œìˆ˜ì  ì…‹ì§¸ ìžë¦¬ê¹Œì§€ ì¶œë ¥í•œë‹¤.
  */
 public class ArrayEx01 {
 	static int[] nList;
@@ -28,11 +28,11 @@ public class ArrayEx01 {
 		averageList = new double[N];
 
 		for(int i=0; i<N; i++) {
-			String buffer = br.readLine(); //ÇÑÁÙÀ» ÀÐ¾î¿Â´Ù.
+			String buffer = br.readLine(); //í•œì¤„ì„ ì½ì–´ì˜¨ë‹¤.
 			String[] parser = buffer.split(" "); //parser.
-			nList[i] = Integer.parseInt(parser[0]); //ÇÑ ¶óÀÎÀÇ Á¡¼ö °¹¼ö¸¦ ¹Þ¾Æ¿À°í.
-			ArrayList<Integer> scoreList = new ArrayList<>();//ÇÑÁÙ Á¡¼ö¸¦ ¹ÞÀ» ArrayList ¼±¾ð 
-			int total = 0;	 // ÇÑÁÙ ÃÑÁ¡À» ´ãÀ» º¯¼ö
+			nList[i] = Integer.parseInt(parser[0]); //í•œ ë¼ì¸ì˜ ì ìˆ˜ ê°¯ìˆ˜ë¥¼ ë°›ì•„ì˜¤ê³ .
+			ArrayList<Integer> scoreList = new ArrayList<>();//í•œì¤„ ì ìˆ˜ë¥¼ ë°›ì„ ArrayList ì„ ì–¸ 
+			int total = 0;	 // í•œì¤„ ì´ì ì„ ë‹´ì„ ë³€ìˆ˜
 			for(int j=0; j<nList[i]; j++) {
 				int score = Integer.parseInt(parser[j+1]);
 				scoreList.add(score);
@@ -40,7 +40,7 @@ public class ArrayEx01 {
 			}
 			scoreLists.add(scoreList);
 			averageList[i] = total/nList[i];
-		} //Æò±Õ ´Ù ±¸ÇÔ 
+		} //í‰ê·  ë‹¤ êµ¬í•¨ 
 		
 		for(int i=0; i<N; i++) {
 			ArrayList<Integer> scoreList = scoreLists.get(i);
@@ -51,6 +51,6 @@ public class ArrayEx01 {
 			}
 			System.out.format("%.3f",(float)cnt/nList[i]*100);
 			System.out.println("%");
-		} //ºñÀ² ´Ù ±¸ÇÔ
+		} //ë¹„ìœ¨ ë‹¤ êµ¬í•¨
 	}
 }
