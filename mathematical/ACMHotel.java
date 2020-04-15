@@ -1,5 +1,10 @@
 package mathematical;
-
+/*
+ * https://www.acmicpc.net/problem/10250
+ * ë°±ì¤€ 10250ë²ˆ ACM í˜¸í…” 
+ * ì‹œê°„ ì œí•œ 1ì´ˆ, ë©”ëª¨ë¦¬ ì œí•œ 256MB
+ */
+ 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -16,16 +21,16 @@ public class ACMHotel {
 		int Y = 0;
 		for(int i=0; i<n; i++) {
 			String[] line = br.readLine().split(" "); 
-			int H = Integer.parseInt(line[0]); //Ãş 
-			int W = Integer.parseInt(line[1]); //ÇÑÃş¿¡ ¸î°³
-			int N = Integer.parseInt(line[2]); //¸î¹øÂ° 
+			int H = Integer.parseInt(line[0]); //ì¸µ 
+			int W = Integer.parseInt(line[1]); //í•œì¸µì— ëª‡ê°œ
+			int N = Integer.parseInt(line[2]); //ëª‡ë²ˆì§¸ 
 			
-			//1.¸î ¹øÂ° ¹æÀÎÁö ±¸ÇÑ´Ù.
+			//1.ëª‡ ë²ˆì§¸ ë°©ì¸ì§€ êµ¬í•œë‹¤.
 			Y = N / H;
 			if(N % H > 0) Y +=1; 
 			
 			
-			//2. ¸î ÃşÀÎÁö ±¸ÇÑ´Ù. 
+			//2. ëª‡ ì¸µì¸ì§€ êµ¬í•œë‹¤. 
 			int start = H * (Y-1) + 1; 
 			X = (N - start) + 1; 
 			
