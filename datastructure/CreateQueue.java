@@ -1,58 +1,80 @@
-package coupang;
-
-import java.util.Stack;
+package queue;
+/*
+ * https://www.acmicpc.net/problem/18258
+ * ���� 18258�� ť2 
+ * �ð� ���� 1��, �޸� ���� 512MB
+ */
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.LinkedList;
 
 public class CreateQueue {
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int[] list = {1,2,3,4};
-		Queue queue = new Queue(list);
-		queue.push(0);
-		System.out.println(queue.toString());
-		for(int i=0; i<queue.size(); i++) { 
-			System.out.print(queue.pop()+",");
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		MyQueue queue = new MyQueue();
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		int n = Integer.parseInt(br.readLine());
+		for(int cnt=0; cnt<n; cnt++) {
+			String[] command = br.readLine().split(" ");
+			switch(command[0]) {
+				case "push" :
+					queue.addLast(Integer.parseInt(command[1]));
+					break;
+				case "pop" :
+					bw.write(queue.pollFirst()+"\n");
+					break;
+				case "size" :
+					bw.write(queue.size()+"\n");
+					break;
+				case "empty" :
+					if(queue.isEmpty()) bw.write(1+"\n");
+					else bw.write(0+"\n");
+					break;
+				case "front" :
+					bw.write(queue.peekFirst()+"\n");
+					break;
+				case "back" :
+					bw.write(queue.peekLast()+"\n");
+			}
 		}
-		System.out.println();
 		
-		
-		/*
-		String elsa = "elsa";
-		Stack stack = new Stack();
-		Stack stack2 = new Stack();
-		for(int i=0; i<elsa.length(); i++) 
-			stack.push(elsa.charAt(i));
-		
-		for(int i=0; i<elsa.length(); i++) 
-			stack2.push(stack.pop());
-		
-		for(int i=0; i<elsa.length(); i++)
-			System.out.print(stack2.pop());
-		System.out.println();*/
+		bw.flush();
+		bw.close();
 	}
-
-}
-
-class Queue {
-	Stack<Integer> stack = new Stack();
-	int[] list;
-	public Queue(int[] list) {
-		this.list = list;
-	}
-	public void push(int idx) {
-		if(idx >= list.length) return; //기본적으로 자바의 함수 호출은 호출 스택에 쌓이기 때문에, 맨 마지막에 push 된 함수가 첫번째로 호출된다.
-		push(idx+1);
-		stack.push(list[idx]);
-	}
-	public String toString() {
-		return stack.toString();
-	}
-	public int pop() {
-		return stack.pop();
-	}
-	public int size() {
-		return list.length;
-	}
-	
 }
 
 
+class MyQueue extends LinkedList<Integer> {	
+	//front
+	@Override
+	public Integer peekFirst() {
+		// TODO Auto-generated method stub
+		if(super.isEmpty()) {
+			return -1;
+		}
+		return super.peekFirst();
+	}
+
+	//back
+	@Override
+	public Integer peekLast() {
+		if(super.isEmpty()) {
+			return -1;
+		}
+		return super.peekLast();
+	}
+
+	//pop
+	@Override
+	public Integer pollFirst() {
+		if(super.isEmpty()) {
+			return -1;
+		}
+		return super.pollFirst();
+	}
+}
