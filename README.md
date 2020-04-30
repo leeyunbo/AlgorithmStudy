@@ -18,7 +18,7 @@
 <ul>
   <li> 정렬 </li>
   <li> 재귀 호출 </li>
-  <li> greedy </li>
+  <li> greedy Algorithm</li>
   <li> Dynamic Programming</li>
   <li> 완전 탐색/ </li> 
   <li> DFS/BFS </li> 
@@ -27,5 +27,7 @@
   <li> 우선순위 큐</li> 
   <li> 쓰레드 프로그래밍/동기화 </li> 
   <li> 소켓 프로그래밍 </li>
+  <li> 다익스트라 알고리즘 </li>
+
 </ul>
 <hr>
