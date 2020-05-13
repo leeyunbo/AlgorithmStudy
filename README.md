@@ -1,33 +1,30 @@
-# JavaCoding
+# Algorithm Study
 
-<h2>백준 알고리즘 풀이 + Programmers 문제 풀이 + 알고리즘 문제해결전략<h2> 
-<hr>
-  
-<h5>프로젝트 배경<h5>
-<ul>
-  <li> 알고리즘 공부 </li>
-  <li> 자바 학습 </li>
-</ul>
-<hr>
-<h5>개발 환경<h5>
-<ul>
-  <li> Eclipse EE </li> 
-</ul>
-<hr>
-<h5>알고리즘 풀이</h5>
-<ul>
-  <li> 정렬 </li>
-  <li> 재귀 호출 </li>
-  <li> greedy Algorithm</li>
-  <li> Dynamic Programming</li>
-  <li> 완전 탐색/ </li> 
-  <li> DFS/BFS </li> 
-  <li> Stack/Queue </li> 
-  <li> Graph/Tree </li>
-  <li> 우선순위 큐</li> 
-  <li> 쓰레드 프로그래밍/동기화 </li> 
-  <li> 소켓 프로그래밍 </li>
-  <li> 다익스트라 알고리즘 </li>
+### 레포지토리 소개 
+```
+다양한 Algorithm 학습을 위한 레포지토리 
+기본적인 알고리즘 학습 후, 다양한 활용 문제를 풀며 Study 진행 
+문제를 푼 후, 다른 사람들의 코드를 확인한 후 효율성에 문제가 발견되면 수정 
+```
 
-</ul>
-<hr>
+### 현재 진도 
+```
+1. Sort 
+  1-1. Bubble, Insertion, Selection sort 
+  1-2. Merge sort
+  1-3. Heap sort
+2. Data Structure 
+  2-1. Stack/Queue 
+  2-2. LinkedList/ArrayList/HashMap  
+  2-3. 우선순위 큐 
+3. Graph 
+  3-1. DFS/BFS 
+  3-2. Graph
+  3-3. 다익스트라 알고리즘 
+4. Basic Algorithm
+  4-1. 완전 탐색 
+  4-2. 재귀 호출
+  4-3. Dynamic Programming 
+  4-4. Greedy Algorithm 
+  4-5. Back Tracking 
+```
