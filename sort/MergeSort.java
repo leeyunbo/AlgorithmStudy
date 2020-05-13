@@ -13,7 +13,7 @@ public class MergeSort {
 		int N = scanner.nextInt();
 		sort_list = new int[N];
 		for(int i=0; i<N; i++) {
-			sort_list[i] = (int) (Math.random()*N);
+			sort_list[i] = scanner.nextInt();
 		}
 		MergeDivide(0, sort_list.length-1);
 		for(int i=0; i<N; i++) {
@@ -22,11 +22,11 @@ public class MergeSort {
 	}
 	
 	public static void Merge(int left, int right, int mid) {
-		int[] buffer_list = new int[right+1];
+		int[] buffer_list = new int[right - left + 1];
 		int l = left;
 		int r = mid+1;
 		int k = 0;
-		while(l <= mid && r <= right && k <= right) {
+		while(l <= mid && r <= right && k <= (right - left)) {
 			if(sort_list[l] < sort_list[r]) {
 				buffer_list[k++]  = sort_list[l++];
 			}
@@ -44,7 +44,7 @@ public class MergeSort {
 		}
 		
 		
-		for(int i=left, j=0; i<buffer_list.length; i++) {
+		for(int i=left, j=0; i<buffer_list.length + left; i++) {
 			sort_list[i] = buffer_list[j++];
 		}
 		
