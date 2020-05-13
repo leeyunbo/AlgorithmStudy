@@ -28,3 +28,10 @@
   4-4. Greedy Algorithm 
   4-5. Back Tracking 
 ```
+
+### 문제 풀이 사이트 및 책
+```
+1. Backjoon Online Judge
+2. Programmers 
+3. 알고리즘 문제 해결 전략
+```
