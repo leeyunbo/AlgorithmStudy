@@ -13,6 +13,7 @@
   1-1. Bubble, Insertion, Selection sort 
   1-2. Merge sort
   1-3. Heap sort
+  1-4. Counting Sort
 2. Data Structure 
   2-1. Stack/Queue 
   2-2. LinkedList/ArrayList/HashMap  
