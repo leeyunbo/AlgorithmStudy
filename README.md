@@ -22,12 +22,14 @@
   3-1. DFS/BFS 
   3-2. Graph
   3-3. 다익스트라 알고리즘 
-4. Basic Algorithm
+4. 해결 기법 
   4-1. 완전 탐색 
   4-2. 재귀 호출
   4-3. Dynamic Programming 
   4-4. Greedy Algorithm 
-  4-5. Back Tracking 
+  4-5. Back Tracking
+  4-6. Slicing Window 
+  4-7. Two Pointer 
 ```
 
 ### 문제 풀이 사이트 및 책
