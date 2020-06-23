@@ -1,7 +1,10 @@
 package programmers;
 
 import java.util.Scanner;
-
+/*
+ * https://programmers.co.kr/learn/courses/30/lessons/12980
+ * 프로그래머스 점프와 순간 이동 
+ */
 public class JumpTeleport {
 
 	public static void main(String[] args) {
