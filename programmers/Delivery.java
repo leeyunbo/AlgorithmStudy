@@ -1,5 +1,10 @@
 package programmers;
 
+/*
+ * https://programmers.co.kr/learn/courses/30/lessons/12978#qna
+ * í”„ë¡œê·¸ë˜ë¨¸ìŠ¤ ë°°ë‹¬
+ */
+
 import java.util.*;
 
 public class Delivery {
@@ -53,11 +58,11 @@ public class Delivery {
 	        queue.add(vertexs[start]); 
 	        
 	        while(!queue.isEmpty()) {
-	            // °¡Àå °¡±î¿î ³ëµå¸¦ °¡Á®¿Â´Ù.
+	            // ê°€ì¥ ê°€ê¹Œìš´ ë…¸ë“œë¥¼ ê°€ì ¸ì˜¨ë‹¤.
 	            Vertex startVertex = queue.poll();
 	            isChecked[startVertex.num] = true;
 	            
-	            // °¡Á®¿Â ³ëµå¿Í ÀÌ¾îÁø ³ëµåµéÀÇ weightÀÌ °»½Å ½ÃÄÑÁÙ °ªº¸´Ù Å©´Ù¸é ÃÖ½ÅÈ­ ½ÃÄÑÁØ´Ù.
+	            // ê°€ì ¸ì˜¨ ë…¸ë“œì™€ ì´ì–´ì§„ ë…¸ë“œë“¤ì˜ weightì´ ê°±ì‹  ì‹œì¼œì¤„ ê°’ë³´ë‹¤ í¬ë‹¤ë©´ ìµœì‹ í™” ì‹œì¼œì¤€ë‹¤.
 	            List<Edge> tempList = adjList.get(startVertex.num); 
 	            
 	            for(Edge edge : tempList) {
@@ -67,7 +72,7 @@ public class Delivery {
 	                vertexs[edge.aim].weight = Math.min(newWeight, oldWeight);
 	                
 	                
-	                 // ÀÌ¾îÁø ³ëµåµéÀ» queue¿¡ Ãß°¡ÇÑ´Ù. (ÀÌ¹Ì ±âÁ¡ÀÌ µÇ¾ú´ø ³ëµå´Â Ãß°¡ÇÏÁö ¾Ê´Â´Ù)
+	                 // ì´ì–´ì§„ ë…¸ë“œë“¤ì„ queueì— ì¶”ê°€í•œë‹¤. (ì´ë¯¸ ê¸°ì ì´ ë˜ì—ˆë˜ ë…¸ë“œëŠ” ì¶”ê°€í•˜ì§€ ì•ŠëŠ”ë‹¤)
 	                if(vertexs[edge.aim].weight != oldWeight && !isChecked[edge.aim]) {
 	                    queue.remove(vertexs[edge.aim]);
 	                    queue.add(vertexs[edge.aim]);
