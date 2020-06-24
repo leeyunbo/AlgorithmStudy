@@ -10,25 +10,27 @@ import java.util.*;
 public class Delivery {
 	
 	 static boolean[] isChecked;
-	 static Vertex[] vertexs;
+	 static Node[] vertexs;
 	 static List<List<Edge>> adjList;
 	 static final int INF = 654321;
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int[][] road = {{1,2,1},{2,3,3},{5,2,2},{1,4,2},{5,3,1}}; 
+		int N = 5;
+		int K = 3;
+		solution(N, road, K);
 	}
 	
 	 private static int solution(int N, int[][] road, int K) {
 	        int answer = 0;
 	        
 	        isChecked = new boolean[N+1]; 
-	        vertexs = new Vertex[N+1]; 
+	        vertexs = new Node[N+1]; 
 	        adjList = new ArrayList<>();
 	        
 	        for(int i=1; i<=N; i++) {
-	            if(i == 1) vertexs[i] = new Vertex(i, 0);
-	            else vertexs[i] = new Vertex(i, INF);
+	            if(i == 1) vertexs[i] = new Node(i, 0);
+	            else vertexs[i] = new Node(i, INF);
 	        }
 	        
 	        for(int i=0; i<=N; i++) {
@@ -53,13 +55,13 @@ public class Delivery {
 	    }
 	    
 	 private static void dijkstra(int start) {
-	        PriorityQueue<Vertex> queue = new PriorityQueue<>();
+	        PriorityQueue<Node> queue = new PriorityQueue<>();
 	      
 	        queue.add(vertexs[start]); 
 	        
 	        while(!queue.isEmpty()) {
 	            // 가장 가까운 노드를 가져온다.
-	            Vertex startVertex = queue.poll();
+	            Node startVertex = queue.poll();
 	            isChecked[startVertex.num] = true;
 	            
 	            // 가져온 노드와 이어진 노드들의 weight이 갱신 시켜줄 값보다 크다면 최신화 시켜준다.
@@ -79,7 +81,7 @@ public class Delivery {
 	                }
 	            }
 	        }
-	    }
+	  }
 }
 
 
@@ -98,11 +100,11 @@ class Edge {
 }
 
 
-class Vertex implements Comparable<Vertex> {
+class Node implements Comparable<Node> {
     int num; 
     int weight; 
     
-    public Vertex(int _num, int _weight) {
+    public Node(int _num, int _weight) {
         num = _num;
         weight = _weight; 
     }
@@ -113,8 +115,8 @@ class Vertex implements Comparable<Vertex> {
     }
     
     @Override
-    public int compareTo(Vertex o1) {
-        if(o1 instanceof Vertex) {
+    public int compareTo(Node o1) {
+        if(o1 instanceof Node) {
             if(weight < o1.weight) return -1;
             else if(weight > o1.weight) return 1;
             else return 0;
