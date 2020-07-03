@@ -32,6 +32,10 @@
   4-5. Back Tracking
   4-6. Slicing Window 
   4-7. Two Pointer 
+5. 디자인 패턴 
+  5-1. Template Method 
+  5-2. Singletone 
+  5-3. Strategy 
 ```
 
 ### 문제 풀이 사이트 및 책
