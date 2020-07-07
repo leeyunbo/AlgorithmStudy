@@ -1,7 +1,7 @@
 package algorithmbook;
 
 /*
- * M-ÀÌµ¿Æò±Õ ¼±Çü ½Ã°£ ÀÌ³» ¾Ë°í¸®ÁòÀ¸·Î ¹®Á¦ Ç®ÀÌ 
+ * M-ì´ë™í‰ê·  ì„ í˜• ì‹œê°„ ì´ë‚´ ì•Œê³ ë¦¬ì¦˜ìœ¼ë¡œ ë¬¸ì œ í’€ì´ 
  * O(i) 
  */
 
