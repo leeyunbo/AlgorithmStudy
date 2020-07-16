@@ -2,6 +2,7 @@ package algorithmbook;
 
 /*
  * 연속된 부분 구간 중 그 합이 최대인 구간을 찾는 문제 
+ * dp사용 O(N)
  */
 
 public class EfficientMaxSum {
@@ -11,18 +12,11 @@ public class EfficientMaxSum {
 		maxSum = A[0];
 		int efficientSumInArray = A[0];
 		for(int i=1; i<A.length; i++) {
-			if(efficientSumInArray <= 0) {
-				efficientSumInArray = A[i];
-			}
-			else {
-				efficientSumInArray += A[i]; 
-			}
-			
+			efficientSumInArray = Math.max(efficientSumInArray, 0);
+			efficientSumInArray += A[i]; 
 			maxSum = Math.max(efficientSumInArray, maxSum);
 		}
 		
 		System.out.println(maxSum);
-
 	}
-
 }
