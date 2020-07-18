@@ -26,6 +26,7 @@
   2-2. LinkedList/ArrayList/HashMap  
   2-3. 우선순위 큐 
   2-4. 원형 큐
+  2-5. Array
 3. Graph 
   3-1. DFS/BFS 
   3-2. Graph
