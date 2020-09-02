@@ -2,7 +2,7 @@ package backjoonChanllenge;
 
 /*
  * https://www.acmicpc.net/problem/11053
- * ¹éÁØ 11053¹ø °¡Àå ±ä Áõ°¡ÇÏ´Â ºÎºĞ ¼ö¿­(LIS)
+ * ë°±ì¤€ 11053ë²ˆ ê°€ì¥ ê¸´ ì¦ê°€í•˜ëŠ” ë¶€ë¶„ ìˆ˜ì—´(LIS)
  */
 
 import java.io.BufferedReader;
