@@ -21,6 +21,7 @@
   1-3. Heap sort
   1-4. Counting Sort
   1-5. Radix Sort
+  1-6. Quick Sort
 2. Data Structure 
   2-1. Stack/Queue 
   2-2. LinkedList/ArrayList/HashMap  
